@@ -2,8 +2,8 @@
 require_once 'Database/MySQL.php';
 
 $host = 'localhost';
-$dbUser = 'root';
-$dbPass = null;
+$dbUser = 'wei';
+$dbPass = 'wei';
 $dbName = 'sitepoint';
 
 $db=&new MySQL($host,$dbUser,$dbPass,$dbName);
