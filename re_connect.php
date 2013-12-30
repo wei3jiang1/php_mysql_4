@@ -11,8 +11,8 @@ function &connectToDb($host,$dbUser,$dbPass,$dbName) {
 }
 
 $host = 'localhost';
-$dbUser = 'root';
-$dbPass = null;
+$dbUser = 'wei';
+$dbPass = 'wei';
 $dbName = 'sitepoint';
 
 $dbConn = &connectToDb($host,$dbUser,$dbPass,$dbName);

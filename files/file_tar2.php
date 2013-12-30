@@ -13,7 +13,10 @@ $tar = new Archive_Tar('demo/articles.tar.gz', 'gz');
 
 $sql = "SELECT * FROM articles";
 
-$result = $db->query($sql);
+//echo "1";
+$result = $db->query($sql); // Array
+
+echo count($result->fetch());
 
 while ($row = $result->fetch()) {
     $tar->addString('articles/' . $row['article_id'] . '.txt', $row['body']);

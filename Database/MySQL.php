@@ -13,11 +13,12 @@ class MySQLResult {
     
     function MySQLResult(&$mysql, $query) {
         $this->mysql = &$mysql;
-        $this->query = &$query;
+        $this->query = $query;
     }
     
     function fetch() {
         if ($row = mysql_fetch_array($this->query, MYSQL_ASSOC)) {
+            //echo '$row=' . count($row);
             return $row;
         } else if ($this->size() > 0) {
             msyql_data_seek($this->query,0);
